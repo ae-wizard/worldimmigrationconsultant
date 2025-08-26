@@ -65,6 +65,8 @@ A **production-grade AI immigration consultant platform** serving 131+ countries
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
+## 💰 **Business Model & Revenue**
+
 ### **Subscription Tiers**
 
 #### **🆓 Free Tier** - $0/month
@@ -176,6 +178,79 @@ Translation Services:
   - Google Translate: Secondary fallback
   - DeepL: Premium translation service
   - Static Cache: Pre-translated common phrases
+```
+
+## 🔄 **Data Pipeline & Knowledge Management**
+
+### **Content Scraping & Vectorization System**
+```yaml
+Data Sources:
+  - USCIS: Official immigration forms, policies, procedures
+  - State Department: Visa information, embassy data
+  - Embassy Websites: Country-specific requirements
+  - CSV Management: 400+ structured immigration sources
+
+Scraping Pipeline:
+  - Automated Web Scraping: BeautifulSoup + Selenium fallback
+  - Progress Tracking: Real-time status monitoring
+  - Error Handling: Graceful degradation with manual upload
+  - Content Validation: Quality checks and deduplication
+  - Scheduling: AWS Lambda for periodic updates
+
+Vectorization Process:
+  - Smart Chunking: Section-aware document processing
+  - Enhanced RAG: Relationship analysis and metadata enrichment
+  - Embeddings: Sentence Transformers (384-dimensional vectors)
+  - Vector Storage: Qdrant collections with semantic search
+  - Fallback Mode: Simple vectorization when enhanced components unavailable
+```
+
+### **Admin Panel Features**
+```yaml
+Content Management:
+  - CSV Editor: Live editing of immigration sources database
+  - Document Upload: Manual upload for failed scrapes
+  - Vectorization Control: Manual and batch processing triggers
+  - Progress Monitoring: Real-time scraping and indexing status
+
+User Management:
+  - User Analytics: Registration, engagement, tier usage
+  - Subscription Control: Tier upgrades, limits, overages
+  - Conversation Monitoring: Chat history and feedback analysis
+  - Payment Tracking: Stripe integration with webhook handling
+
+System Administration:
+  - Database Status: Vector DB health and collection metrics
+  - API Monitoring: Service status and performance metrics
+  - Scheduled Tasks: Automated content updates and maintenance
+  - Activity Logging: Comprehensive audit trail
+
+Knowledge Base Operations:
+  - Qdrant Collections: Multiple vector databases for different content types
+  - Search Testing: Admin interface for testing RAG queries
+  - Content Analytics: Document coverage and freshness scoring
+  - Bulk Operations: Mass content updates and migrations
+```
+
+### **Knowledge Base Architecture**
+```yaml
+Data Flow:
+  1. CSV Sources → Web Scraping → Raw Content
+  2. Content Processing → Smart Chunking → Metadata Enrichment
+  3. Vectorization → Qdrant Storage → RAG Integration
+  4. User Query → Vector Search → Context Retrieval → AI Response
+
+Vector Collections:
+  - immigration_docs: Main knowledge base (400MB+)
+  - enhanced_chunks: Smart-chunked content with relationships
+  - csv_metadata: Structured country/category mappings
+  - conversation_memory: User context and chat history
+
+Search & Retrieval:
+  - Semantic Search: Vector similarity matching
+  - Metadata Filtering: Country, category, document type
+  - Hybrid Search: Vector + keyword matching
+  - Context Ranking: Relevance scoring and freshness weighting
 ```
 
 ## 🔧 **Production Deployment**
@@ -358,17 +433,66 @@ curl https://your-production-domain.com/health
 
 ### **Local Development Setup**
 ```bash
-# Backend
+# Backend (Production Server)
 cd backend
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python admin_secure.py
+python admin_secure.py  # Main production server with all features
 
 # Frontend
 cd frontend
 npm install
 npm run dev
+```
+
+### **Core System Files**
+```yaml
+Backend Production Server:
+  - admin_secure.py: Main FastAPI server (6,800+ lines)
+    * Complete admin panel with 50+ endpoints
+    * User authentication and subscription management
+    * Scraping pipeline with progress tracking
+    * Vectorization system with smart chunking
+    * Qdrant vector database integration
+    * Stripe payment processing
+    * Conversation memory with LangChain
+    * AWS services integration
+
+Data Pipeline:
+  - scraper.py: Web scraping for USCIS/Embassy data
+  - embeddings.py: Vector database operations
+  - embeddings_csv.py: CSV content processing
+  - aws_scheduler.py: AWS Lambda scheduling
+
+Frontend Components:
+  - AdminPanel.jsx: Admin dashboard (20KB)
+  - SecureAdminPanel.jsx: Advanced admin features (193KB)
+  - AvatarSarah.jsx: HeyGen avatar integration (24KB)
+  - ConversationalChat.jsx: Main chat interface (20KB)
+  - WorldwideChat.jsx: Global chat system (110KB)
+```
+
+### **Admin Panel Endpoints**
+```yaml
+Content Management:
+  - GET/POST /admin/csv/data: CSV editor and management
+  - POST /admin/scrape/manual: Trigger manual scraping
+  - GET /admin/scrape/progress: Real-time scraping status
+  - POST /admin/vectorize: Start vectorization process
+  - GET /admin/vectorize/progress: Vectorization status
+
+User & Analytics:
+  - GET /admin/users: User management dashboard
+  - GET /admin/conversations: Chat history analysis
+  - GET /admin/analytics: Business metrics
+  - GET /admin/leads: Lead management
+
+System Operations:
+  - GET /admin/status: System health dashboard
+  - GET /admin/qdrant/collections: Vector DB management
+  - GET /admin/qdrant/search: Test RAG queries
+  - POST /admin/schedules: Task scheduling
 ```
 
 ## 📄 **License & Legal**
