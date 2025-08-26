@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Test</title>
+</head>
+<body>
+    <h1>Translation Loading Test</h1>
+    <div id="status">Loading...</div>
+    <div id="translations"></div>
+    
+    <script>
+        console.log('🧪 Starting translation test...');
+        
+        // Test static translations loading
+        async function testTranslations() {
+            try {
+                const response = await fetch('http://localhost:8001/static-translations/English');
+                console.log('📡 Response status:', response.status);
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log('✅ Translations loaded:', data);
+                    document.getElementById('status').textContent = 'Translations loaded successfully!';
+                    document.getElementById('translations').innerHTML = `
+                        <h3>Sample translations:</h3>
+                        <p><strong>choose_continue:</strong> ${data.translations.messages?.choose_continue || 'NOT_FOUND'}</p>
+                        <p><strong>start_fresh_conversation:</strong> ${data.translations.buttons?.start_fresh_conversation || 'NOT_FOUND'}</p>
+                        <p><strong>Categories:</strong> ${Object.keys(data.translations).join(', ')}</p>
+                    `;
+                } else {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+            } catch (error) {
+                console.error('❌ Error loading translations:', error);
+                document.getElementById('status').textContent = `Error: ${error.message}`;
+            }
+        }
+        
+        // Test backend health
+        async function testBackend() {
+            try {
+                const response = await fetch('http://localhost:8001/health');
+                const data = await response.json();
+                console.log('🏥 Backend health:', data);
+            } catch (error) {
+                console.error('❌ Backend error:', error);
+            }
+        }
+        
+        // Run tests
+        testBackend();
+        testTranslations();
+    </script>
+</body>
+</html> 

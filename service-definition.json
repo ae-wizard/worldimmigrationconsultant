@@ -1,0 +1,21 @@
+{
+  "serviceName": "worldimmigration-backend-service",
+  "cluster": "worldimmigration-cluster",
+  "taskDefinition": "worldimmigration-backend",
+  "desiredCount": 1,
+  "launchType": "FARGATE",
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "subnets": ["subnet-02a633f49bb30db39","subnet-0b4bc0479c82c06df","subnet-091bfeaffc522e12e","subnet-0eb0ace8467607deb","subnet-06590cfa8f407882b","subnet-0b46a26a0fde0dcca"],
+      "securityGroups": ["sg-08aa0745d5ab07df4"],
+      "assignPublicIp": "ENABLED"
+    }
+  },
+  "loadBalancers": [
+    {
+      "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:697482068836:targetgroup/worldimmigration-targets/57bfa6a75a460be0",
+      "containerName": "worldimmigration-backend",
+      "containerPort": 80
+    }
+  ]
+}

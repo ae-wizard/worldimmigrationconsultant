@@ -1,0 +1,2620 @@
+{
+  "English": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:",
+      "whats_immigration_goal": "What's your immigration question?"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue:",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Spanish": {
+    "ui": {
+      "welcome_message": "¡Bienvenido a tu consultor de inmigración personal!",
+      "previous_conversations": "📋 Conversaciones anteriores",
+      "upgrade_prompt": "⚡ ¡Actualiza para más funciones!",
+      "loading": "Cargando...",
+      "error_generic": "Ocurrió un error",
+      "welcome_back_premium": "¡Bienvenido de vuelta, {first_name}! 👋\\n\\nComo **miembro Premium**, tienes acceso al historial de conversaciones y funciones avanzadas.",
+      "welcome_sarah_simple": "¡Hola! Soy Sarah, tu consultora de inmigración mundial. ¡Ayudo a las personas a inmigrar a CUALQUIER país del mundo! 🌍",
+      "whats_immigration_goal": "¿Cuál es tu pregunta sobre inmigración?",
+      "welcome_sarah": "¡Hola {first_name}! Soy Sarah, tu consultora de inmigración mundial. ¡Ayudo a las personas a inmigrar a CUALQUIER país del mundo! 🌍",
+      "latest_government_data": "Utilizo los datos oficiales más recientes del gobierno para brindarte orientación precisa y actualizada. Comencemos: ¿a qué país quieres inmigrar?",
+      "excellent_choice_from": "¡Excelente elección! Ahora, ¿de qué país eres?",
+      "wonderful_immigration_goal": "¡Excelente! ¿Cuál es tu objetivo principal de inmigración?",
+      "great_choice_opportunities": "¡Excelente elección! {destination} ofrece oportunidades increíbles para {goal}. Permíteme ayudarte a entender el proceso.",
+      "confirm_origin_country": "Solo para confirmar: ¿actualmente eres de {country}?",
+      "welcome_user": "¡Bienvenido, {first_name}! 👋\\n\\nElige cómo te gustaría obtener orientación sobre inmigración:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Iniciar Conversación Nueva",
+      "send_message": "Enviar Mensaje",
+      "login": "Iniciar Sesión",
+      "register": "Registrarse",
+      "start_fresh_conversation": "🆕 Iniciar Conversación Nueva",
+      "qa_mode_interactive": "💬 Modo P&R - Conversación interactiva con Sarah",
+      "pdf_mode_report": "📄 Modo PDF - Generar reporte completo",
+      "qa_mode": "💬 Modo P&R - Hacer preguntas directamente",
+      "pdf_report": "📄 Reporte PDF - Obtener un reporte completo",
+      "yes_from_country": "Sí, soy de {country}",
+      "no_select_different": "No, seleccionar país diferente"
+    },
+    "placeholders": {
+      "ask_question": "Pregúntame cualquier cosa sobre inmigración...",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "ask_immigration_question": "Haz tu pregunta sobre inmigración...",
+      "select_destination": "Selecciona país de destino...",
+      "select_current_country": "Selecciona tu país actual...",
+      "select_your_goal": "Selecciona tu objetivo de inmigración..."
+    },
+    "goals": {
+      "work": "Trabajo",
+      "study": "Estudio",
+      "family": "Familia",
+      "invest": "Inversión",
+      "visit": "Visita",
+      "permanent_residence": "Residencia Permanente",
+      "citizenship": "Ciudadanía",
+      "other": "Otro"
+    },
+    "account": {
+      "profile": "Perfil",
+      "logout": "Cerrar Sesión"
+    },
+    "subscription": {
+      "free": "Gratis",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Tiempo de Avatar"
+    },
+    "messages": {
+      "loading": "Cargando...",
+      "error_generic": "Ocurrió un error",
+      "upgrade_prompt": "⚡ ¡Actualiza para más funciones!",
+      "choose_continue": "Elige cómo te gustaría continuar:",
+      "perfect_qa_mode": "¡Perfecto! Ahora elige tu modo de consulta:",
+      "start_fresh_conversation": "🆕 Iniciar Conversación Nueva",
+      "activating_report_mode": "Activando Modo de Generación de Reportes...",
+      "starting_consultation": "Iniciando tu sesión de consulta nueva...",
+      "loading_conversation_report": "Cargando tu conversación anterior: \"{title}\"... Luego generaré un reporte completo para ti.",
+      "loading_conversation": "Cargando tu conversación anterior: \"{title}\"...",
+      "generating_report": "Generando tu reporte de inmigración...",
+      "perfect_continue": "¡Perfecto! Permíteme seguir ayudándote con tu caso de inmigración...",
+      "no_problem_discuss": "¡No hay problema! ¿De qué te gustaría hablar hoy?"
+    }
+  },
+  "Filipino": {
+    "ui": {
+      "welcome_message": "Maligayang pagdating sa inyong personal na konsultant sa immigration!",
+      "previous_conversations": "📋 Mga nakaraang pag-uusap",
+      "upgrade_prompt": "⚡ Mag-upgrade para sa mas maraming features!",
+      "loading": "Naglo-load...",
+      "error_generic": "May naganap na error",
+      "welcome_back_premium": "Maligayang pagbabalik, {first_name}! 👋\\n\\nBilang **Premium member**, may access kayo sa conversation history at advanced features.",
+      "welcome_sarah_simple": "Kumusta! Ako si Sarah, ang inyong worldwide immigration consultant. Tumutulong ako sa mga taong nais mag-immigrate sa KAHIT SAANG bansa sa mundo! 🌍",
+      "whats_immigration_goal": "Ano ang inyong immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Simulan ang Bagong Conversation",
+      "send_message": "Ipadala ang Mensahe",
+      "login": "Mag-login",
+      "register": "Mag-register",
+      "start_fresh_conversation": "🆕 Simulan ang Bagong Pag-uusap",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive na pag-uusap kay Sarah",
+      "pdf_mode_report": "📄 PDF Mode - Gumawa ng comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Magtanong nang direkta",
+      "pdf_report": "📄 PDF Report - Kumuha ng komprehensibong ulat",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Tanungin mo ako tungkol sa immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Tanungin mo ako tungkol sa immigration...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Trabaho",
+      "study": "Pag-aaral",
+      "family": "Pamilya",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Mag-logout"
+    },
+    "subscription": {
+      "free": "Libre",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Oras ng Avatar"
+    },
+    "messages": {
+      "loading": "Naglo-load...",
+      "error_generic": "May naganap na error",
+      "upgrade_prompt": "⚡ Mag-upgrade para sa mas maraming features!",
+      "choose_continue": "Piliin kung paano ninyo gustong magpatuloy:",
+      "perfect_qa_mode": "Perpekto! Pumili na ng inyong consultation mode:",
+      "start_fresh_conversation": "🆕 Simulan ang Bagong Pag-uusap",
+      "activating_report_mode": "Pinapagana ang Report Generation Mode...",
+      "starting_consultation": "Sinisimulan ang inyong bagong consultation session...",
+      "loading_conversation_report": "Nilo-load ang inyong nakaraang pag-uusap: \"{title}\"... Gagawin ko ang comprehensive report para sa inyo.",
+      "loading_conversation": "Nilo-load ang inyong nakaraang pag-uusap: \"{title}\"...",
+      "generating_report": "Ginagawa ang inyong immigration report...",
+      "perfect_continue": "Perpekto! Ippatuloy ko kayong tulungan sa inyong immigration case...",
+      "no_problem_discuss": "Walang problema! Ano ang gusto ninyong pag-usapan ngayon?"
+    }
+  },
+  "French": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Bon retour, {first_name}! 👋\\n\\nEn tant que **membre Premium**, vous avez accès à l'historique des conversations et aux fonctionnalités avancées.",
+      "welcome_sarah_simple": "Bonjour! Je suis Sarah, votre consultante en immigration mondiale. J'aide les gens à immigrer dans N'IMPORTE QUEL pays du monde! 🌍",
+      "whats_immigration_goal": "Quelle est votre question sur l'immigration?",
+      "welcome_sarah": "Bonjour {first_name}! Je suis Sarah, votre consultante en immigration mondiale. J'aide les gens à immigrer dans N'IMPORTE QUEL pays du monde! 🌍",
+      "latest_government_data": "J'utilise les données officielles les plus récentes du gouvernement pour vous donner des conseils précis et à jour. Commençons - dans quel pays voulez-vous immigrer?",
+      "excellent_choice_from": "Excellent choix! Maintenant, de quel pays venez-vous?",
+      "wonderful_immigration_goal": "Merveilleux! Quel est votre objectif principal d'immigration?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Bienvenue, {first_name}! 👋\\n\\nChoisissez comment vous aimeriez obtenir des conseils sur l'immigration:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Commencer une Nouvelle Conversation",
+      "qa_mode_interactive": "💬 Mode Q&R - Conversation interactive avec Sarah",
+      "pdf_mode_report": "📄 Mode PDF - Générer un rapport complet",
+      "qa_mode": "💬 Mode Q&R - Poser des questions directement",
+      "pdf_report": "📄 Rapport PDF - Obtenir un rapport complet",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Posez votre question sur l'immigration...",
+      "select_destination": "Sélectionnez le pays de destination...",
+      "select_current_country": "Sélectionnez votre pays actuel...",
+      "select_your_goal": "Sélectionnez votre objectif d'immigration..."
+    },
+    "goals": {
+      "work": "Travail",
+      "study": "Étude",
+      "family": "Famille",
+      "invest": "Investissement",
+      "visit": "Visite",
+      "permanent_residence": "Résidence Permanente",
+      "citizenship": "Citoyenneté",
+      "other": "Autre"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choisissez comment vous souhaitez continuer:",
+      "perfect_qa_mode": "Parfait! Maintenant choisissez votre mode de consultation:",
+      "start_fresh_conversation": "🆕 Commencer une Nouvelle Conversation",
+      "activating_report_mode": "Activation du Mode de Génération de Rapport...",
+      "starting_consultation": "Démarrage de votre nouvelle session de consultation...",
+      "loading_conversation_report": "Chargement de votre conversation précédente: \"{title}\"... Je vais ensuite générer un rapport complet pour vous.",
+      "loading_conversation": "Chargement de votre conversation précédente: \"{title}\"...",
+      "generating_report": "Génération de votre rapport d'immigration...",
+      "perfect_continue": "Parfait! Je vais continuer à vous aider avec votre dossier d'immigration...",
+      "no_problem_discuss": "Pas de problème! De quoi aimeriez-vous parler aujourd'hui?"
+    }
+  },
+  "German": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Willkommen zurück, {first_name}! 👋\\n\\nAls **Premium-Mitglied** hast du Zugang zu Gesprächen und erweiterten Funktionen.",
+      "welcome_sarah_simple": "Hallo! Ich bin Sarah, deine weltweite Einwanderungsberaterin. Ich helfe Menschen, in JEDES Land der Welt zu immigrieren! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hallo {first_name}! Ich bin Sarah, deine weltweite Einwanderungsberaterin. Ich helfe Menschen, in JEDES Land der Welt zu immigrieren! 🌍",
+      "latest_government_data": "Ich verwende die neuesten offiziellen Regierungsdaten, um dir präzise, aktuelle Beratung zu geben. Lass uns anfangen - in welches Land möchtest du immigrieren?",
+      "excellent_choice_from": "Ausgezeichnete Wahl! Aus welchem Land kommst du?",
+      "wonderful_immigration_goal": "Wunderbar! Was ist dein hauptsächliches Einwanderungsziel?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Willkommen, {first_name}! 👋\\n\\nWähle, wie du Einwanderungsberatung erhalten möchtest:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Neue Unterhaltung beginnen",
+      "qa_mode_interactive": "💬 Frage-Antwort-Modus - Interaktive Unterhaltung mit Sarah",
+      "pdf_mode_report": "📄 PDF-Modus - Umfassenden Bericht erstellen",
+      "qa_mode": "💬 Frage-Antwort-Modus - Fragen direkt stellen",
+      "pdf_report": "📄 PDF-Bericht - Vollständigen Bericht erhalten",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Stelle deine Einwanderungsfrage...",
+      "select_destination": "Zielland auswählen...",
+      "select_current_country": "Dein aktuelles Land auswählen...",
+      "select_your_goal": "Dein Einwanderungsziel auswählen..."
+    },
+    "goals": {
+      "work": "Arbeit",
+      "study": "Studium",
+      "family": "Familie",
+      "invest": "Investition",
+      "visit": "Besuch",
+      "permanent_residence": "Dauerhafter Aufenthalt",
+      "citizenship": "Staatsbürgerschaft",
+      "other": "Andere"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Wählen Sie, wie Sie fortfahren möchten:",
+      "perfect_qa_mode": "Perfekt! Wählen Sie nun Ihren Beratungsmodus:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Italian": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Conversazioni precedenti",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Bentornato, {first_name}! 👋\\n\\nCome **membro Premium**, hai accesso alla cronologia delle conversazioni e alle funzionalità avanzate.",
+      "welcome_sarah_simple": "Ciao! Sono Sarah, la tua consulente di immigrazione mondiale. Aiuto le persone a immigrare in QUALSIASI paese del mondo! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Ciao {first_name}! Sono Sarah, la tua consulente di immigrazione mondiale. Aiuto le persone a immigrare in QUALSIASI paese del mondo! 🌍",
+      "latest_government_data": "Uso i dati governativi ufficiali più recenti per fornirti una guida precisa e aggiornata. Iniziamo - in quale paese vuoi immigrare?",
+      "excellent_choice_from": "Ottima scelta! Ora, da quale paese vieni?",
+      "wonderful_immigration_goal": "Meraviglioso! Qual è il tuo obiettivo principale di immigrazione?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Benvenuto, {first_name}! 👋\\n\\nScegli come vorresti ottenere la guida sull'immigrazione:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Inizia Nuova Conversazione",
+      "qa_mode_interactive": "💬 Modalità Q&A - Conversazione interattiva con Sarah",
+      "pdf_mode_report": "📄 Modalità PDF - Genera report completo",
+      "qa_mode": "💬 Modalità Domande e Risposte - Fai domande direttamente",
+      "pdf_report": "📄 Rapporto PDF - Ottieni rapporto completo",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Fai la tua domanda sull'immigrazione...",
+      "select_destination": "Seleziona il paese di destinazione...",
+      "select_current_country": "Seleziona il tuo paese attuale...",
+      "select_your_goal": "Seleziona il tuo obiettivo di immigrazione..."
+    },
+    "goals": {
+      "work": "Lavoro",
+      "study": "Studio",
+      "family": "Famiglia",
+      "invest": "Investimento",
+      "visit": "Visita",
+      "permanent_residence": "Residenza Permanente",
+      "citizenship": "Cittadinanza",
+      "other": "Altro"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Scegli come vorresti continuare:",
+      "perfect_qa_mode": "Perfetto! Ora scegli la tua modalità di consulenza:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Portuguese": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Conversas anteriores",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Bem-vindo de volta, {first_name}! 👋\\n\\nComo **membro Premium**, você tem acesso ao histórico de conversas e recursos avançados.",
+      "welcome_sarah_simple": "Olá! Sou Sarah, sua consultora de imigração mundial. Ajudo pessoas a imigrar para QUALQUER país do mundo! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Olá {first_name}! Sou Sarah, sua consultora de imigração mundial. Ajudo pessoas a imigrar para QUALQUER país do mundo! 🌍",
+      "latest_government_data": "Uso os dados governamentais oficiais mais recentes para fornecer orientação precisa e atualizada. Vamos começar - para qual país você quer imigrar?",
+      "excellent_choice_from": "Excelente escolha! Agora, de qual país você é?",
+      "wonderful_immigration_goal": "Maravilhoso! Qual é seu principal objetivo de imigração?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Bem-vindo, {first_name}! 👋\\n\\nEscolha como gostaria de obter orientação sobre imigração:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Iniciar Nova Conversa",
+      "qa_mode_interactive": "💬 Modo P&R - Conversa interativa com Sarah",
+      "pdf_mode_report": "📄 Modo PDF - Gerar relatório completo",
+      "qa_mode": "💬 Modo P&R - Fazer perguntas diretamente",
+      "pdf_report": "📄 Relatório PDF - Obter relatório completo",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Faça sua pergunta sobre imigração...",
+      "select_destination": "Selecione o país de destino...",
+      "select_current_country": "Selecione seu país atual...",
+      "select_your_goal": "Selecione seu objetivo de imigração..."
+    },
+    "goals": {
+      "work": "Trabalho",
+      "study": "Estudo",
+      "family": "Família",
+      "invest": "Investimento",
+      "visit": "Visita",
+      "permanent_residence": "Residência Permanente",
+      "citizenship": "Cidadania",
+      "other": "Outro"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Escolha como gostaria de continuar:",
+      "perfect_qa_mode": "Perfeito! Agora escolha seu modo de consulta:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Russian": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Предыдущие беседы",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Добро пожаловать обратно, {first_name}! 👋\\n\\nКак **Премиум-член**, у вас есть доступ к истории разговоров и расширенным функциям.",
+      "welcome_sarah_simple": "Привет! Я Сара, ваш консультант по иммиграции по всему миру. Я помогаю людям иммигрировать в ЛЮБУЮ страну мира! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Привет {first_name}! Я Сара, ваш консультант по иммиграции по всему миру. Я помогаю людям иммигрировать в ЛЮБУЮ страну мира! 🌍",
+      "latest_government_data": "Я использую самые последние официальные правительственные данные для предоставления точных и актуальных рекомендаций. Давайте начнем - в какую страну вы хотите иммигрировать?",
+      "excellent_choice_from": "Отличный выбор! Теперь, из какой страны вы?",
+      "wonderful_immigration_goal": "Замечательно! Какова ваша главная цель иммиграции?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Добро пожаловать, {first_name}! 👋\\n\\nВыберите, как вы хотели бы получить консультацию по иммиграции:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Начать новый разговор",
+      "qa_mode_interactive": "💬 Режим В&О - Интерактивная беседа с Сарой",
+      "pdf_mode_report": "📄 PDF-режим - Создать подробный отчет",
+      "qa_mode": "💬 Режим вопросов и ответов - задавайте вопросы напрямую",
+      "pdf_report": "📄 PDF-отчет - получить полный отчет",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Задайте свой вопрос по иммиграции...",
+      "select_destination": "Выберите страну назначения...",
+      "select_current_country": "Выберите вашу текущую страну...",
+      "select_your_goal": "Выберите вашу цель иммиграции..."
+    },
+    "goals": {
+      "work": "Работа",
+      "study": "Учеба",
+      "family": "Семья",
+      "invest": "Инвестиции",
+      "visit": "Посещение",
+      "permanent_residence": "Постоянное проживание",
+      "citizenship": "Гражданство",
+      "other": "Другое"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Выберите, как вы хотите продолжить:",
+      "perfect_qa_mode": "Отлично! Теперь выберите режим консультации:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Chinese": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "欢迎回来，{first_name}! 👋\\n\\n作为**高级会员**，你可以访问对话历史记录和高级功能。",
+      "welcome_sarah_simple": "你好! 我是莎拉，你的全球移民顾问。我帮助人们移民到世界上任何国家! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "你好{first_name}! 我是莎拉，你的全球移民顾问。我帮助人们移民到世界上任何国家! 🌍",
+      "latest_government_data": "我使用最新的官方政府数据为你提供准确、最新的指导。让我们开始 - 你想移民到哪个国家？",
+      "excellent_choice_from": "很好的选择！现在，你来自哪个国家？",
+      "wonderful_immigration_goal": "太好了！你的主要移民目标是什么？",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "欢迎，{first_name}! 👋\\n\\n请选择你想如何获得移民指导："
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 开始新对话",
+      "qa_mode_interactive": "💬 问答模式 - 与莎拉互动对话",
+      "pdf_mode_report": "📄 PDF模式 - 生成综合报告",
+      "qa_mode": "💬 问答模式 - 直接提问",
+      "pdf_report": "📄 PDF报告 - 获取完整报告",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "问你的移民问题...",
+      "select_destination": "选择目的地国家...",
+      "select_current_country": "选择你的当前国家...",
+      "select_your_goal": "选择你的移民目标..."
+    },
+    "goals": {
+      "work": "工作",
+      "study": "学习",
+      "family": "家庭",
+      "invest": "投资",
+      "visit": "访问",
+      "permanent_residence": "永久居留",
+      "citizenship": "公民身份",
+      "other": "其他"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "选择您希望如何继续：",
+      "perfect_qa_mode": "完美！现在选择您的咨询模式：",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Japanese": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 以前の会話",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 新しい会話を始める",
+      "qa_mode_interactive": "💬 Q&Aモード - サラとの対話",
+      "pdf_mode_report": "📄 PDFモード - 包括的なレポートを生成",
+      "qa_mode": "💬 Q&Aモード - 直接質問する",
+      "pdf_report": "📄 PDFレポート - 包括的なレポートを取得",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "続行方法を選択してください：",
+      "perfect_qa_mode": "完璧です！コンサルテーションモードを選択してください：",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Korean": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 이전 대화",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 새로운 대화 시작",
+      "qa_mode_interactive": "💬 Q&A 모드 - Sarah와의 대화형 상담",
+      "pdf_mode_report": "📄 PDF 모드 - 포괄적인 보고서 생성",
+      "qa_mode": "💬 Q&A 모드 - 직접 질문하기",
+      "pdf_report": "📄 PDF 보고서 - 포괄적인 보고서 받기",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "계속하려는 방법을 선택하세요:",
+      "perfect_qa_mode": "완벽합니다! 상담 모드를 선택하세요:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Arabic": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 بدء محادثة جديدة",
+      "qa_mode_interactive": "💬 وضع الأسئلة والأجوبة - محادثة تفاعلية مع سارة",
+      "pdf_mode_report": "📄 وضع PDF - إنشاء تقرير شامل",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "اختر كيف تريد المتابعة:",
+      "perfect_qa_mode": "ممتاز! الآن اختر وضع الاستشارة:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Dutch": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Vorige gesprekken",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Nieuw gesprek beginnen",
+      "qa_mode_interactive": "💬 V&A Modus - Interactief gesprek met Sarah",
+      "pdf_mode_report": "📄 PDF Modus - Uitgebreid rapport genereren",
+      "qa_mode": "💬 V&A Modus - Direct vragen stellen",
+      "pdf_report": "📄 PDF Rapport - Uitgebreid rapport krijgen",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Kies hoe je wilt doorgaan:",
+      "perfect_qa_mode": "Perfect! Kies nu je consultatiemode:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Swedish": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Tidigare samtal",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Starta nytt samtal",
+      "qa_mode_interactive": "💬 F&S-läge - Interaktivt samtal med Sarah",
+      "pdf_mode_report": "📄 PDF-läge - Generera omfattande rapport",
+      "qa_mode": "💬 F&S-läge - Ställ frågor direkt",
+      "pdf_report": "📄 PDF-rapport - Få omfattande rapport",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Välj hur du vill fortsätta:",
+      "perfect_qa_mode": "Perfekt! Välj nu ditt konsultationsläge:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Polish": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Poprzednie rozmowy",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Rozpocznij nową rozmowę",
+      "qa_mode_interactive": "💬 Tryb P&O - Interaktywna rozmowa z Sarah",
+      "pdf_mode_report": "📄 Tryb PDF - Wygeneruj kompleksowy raport",
+      "qa_mode": "💬 Tryb pytań i odpowiedzi - Zadawaj pytania bezpośrednio",
+      "pdf_report": "📄 Raport PDF - Otrzymaj kompleksowy raport",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Wybierz, jak chcesz kontynuować:",
+      "perfect_qa_mode": "Doskonale! Teraz wybierz tryb konsultacji:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Turkish": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Önceki sohbetler",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Yeni sohbet başlat",
+      "qa_mode_interactive": "💬 S&C Modu - Sarah ile etkileşimli sohbet",
+      "pdf_mode_report": "📄 PDF Modu - Kapsamlı rapor oluştur",
+      "qa_mode": "💬 Soru-Cevap Modu - Doğrudan soru sor",
+      "pdf_report": "📄 PDF Raporu - Kapsamlı rapor al",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Nasıl devam etmek istediğinizi seçin:",
+      "perfect_qa_mode": "Mükemmel! Şimdi danışmanlık modunuzu seçin:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Hindi": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 पिछली बातचीत",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 नई बातचीत शुरू करें",
+      "qa_mode_interactive": "💬 प्र&उ मोड - सारा के साथ इंटरैक्टिव बातचीत",
+      "pdf_mode_report": "📄 PDF मोड - व्यापक रिपोर्ट तैयार करें",
+      "qa_mode": "💬 प्रश्न-उत्तर मोड - सीधे प्रश्न पूछें",
+      "pdf_report": "📄 PDF रिपोर्ट - व्यापक रिपोर्ट प्राप्त करें",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "आप कैसे जारी रखना चाहते हैं चुनें:",
+      "perfect_qa_mode": "बेहतरीन! अब अपना परामर्श मोड चुनें:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Urdu": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 پچھلی گفتگو",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 نئی گفتگو شروع کریں",
+      "qa_mode_interactive": "💬 سوال جواب موڈ - سارہ کے ساتھ انٹرایکٹو گفتگو",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "آپ کیسے جاری رکھنا چاہتے ہیں منتخب کریں:",
+      "perfect_qa_mode": "بہترین! اب اپنا مشاورتی طریقہ منتخب کریں:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Indonesian": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Percakapan sebelumnya",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Mulai percakapan baru",
+      "qa_mode_interactive": "💬 Mode T&J - Percakapan interaktif dengan Sarah",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Pilih bagaimana Anda ingin melanjutkan:",
+      "perfect_qa_mode": "Sempurna! Sekarang pilih mode konsultasi Anda:",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Thai": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Thai translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Thai translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Thai translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Thai translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Thai translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Vietnamese": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Vietnamese translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Vietnamese translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Vietnamese translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Vietnamese translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Vietnamese translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Hungarian": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Hungarian translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Hungarian translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Hungarian translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Hungarian translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Hungarian translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Norwegian": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Norwegian translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Norwegian translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Norwegian translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Norwegian translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Norwegian translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Bulgarian": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Bulgarian translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Bulgarian translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Bulgarian translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Bulgarian translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Bulgarian translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Romanian": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Romanian translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Romanian translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Romanian translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Romanian translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Romanian translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Greek": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Greek translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Greek translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Greek translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Greek translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Greek translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Finnish": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Finnish translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Finnish translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Finnish translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Finnish translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Finnish translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Croatian": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Croatian translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Croatian translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Croatian translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Croatian translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Croatian translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Danish": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Danish translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Danish translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Danish translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Danish translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Danish translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Tamil": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Tamil translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Tamil translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Tamil translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Tamil translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Tamil translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Czech": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Czech translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Czech translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Czech translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Czech translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Czech translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Slovak": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Slovak translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Slovak translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Slovak translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Slovak translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Slovak translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Ukrainian": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Ukrainian translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Ukrainian translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Ukrainian translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Ukrainian translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Ukrainian translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  },
+  "Malay": {
+    "ui": {
+      "welcome_message": "Welcome to your personal immigration consultant!",
+      "previous_conversations": "📋 Previous conversations (Malay translation needed)",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "welcome_back_premium": "Welcome back, {first_name}! 👋\\n\\nAs a **Premium member**, you have access to conversation history and advanced features.",
+      "welcome_sarah_simple": "Hello! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "whats_immigration_goal": "What's your immigration question?",
+      "welcome_sarah": "Hello {first_name}! I'm Sarah, your worldwide immigration consultant. I help people immigrate to ANY country globally! 🌍",
+      "latest_government_data": "I use the latest official government data to give you accurate, up-to-date guidance. Let's start - which country do you want to immigrate TO?",
+      "excellent_choice_from": "Excellent choice! Now, what country are you FROM?",
+      "wonderful_immigration_goal": "Wonderful! What's your main immigration goal?",
+      "great_choice_opportunities": "Great choice! {destination} offers amazing opportunities for {goal}. Let me help you understand the process.",
+      "confirm_origin_country": "Just to confirm - you're currently from {country}?",
+      "welcome_user": "Welcome, {first_name}! 👋\\n\\nChoose how you'd like to get immigration guidance:"
+    },
+    "buttons": {
+      "start_fresh": "🆕 Start Fresh Conversation",
+      "send_message": "Send Message",
+      "login": "Login",
+      "register": "Register",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation (Malay translation needed)",
+      "qa_mode_interactive": "💬 Q&A Mode - Interactive conversation with Sarah (Malay translation needed)",
+      "pdf_mode_report": "📄 PDF Mode - Generate comprehensive report",
+      "qa_mode": "💬 Q&A Mode - Ask questions directly",
+      "pdf_report": "📄 PDF Report - Get a comprehensive report",
+      "yes_from_country": "Yes, I'm from {country}",
+      "no_select_different": "No, select different country"
+    },
+    "placeholders": {
+      "ask_question": "Ask me anything about immigration...",
+      "email": "Email",
+      "password": "Password",
+      "ask_immigration_question": "Ask your immigration question...",
+      "select_destination": "Select destination country...",
+      "select_current_country": "Select your current country...",
+      "select_your_goal": "Select your immigration goal..."
+    },
+    "goals": {
+      "work": "Work",
+      "study": "Study",
+      "family": "Family",
+      "invest": "Investment",
+      "visit": "Visit",
+      "permanent_residence": "Permanent Residence",
+      "citizenship": "Citizenship",
+      "other": "Other"
+    },
+    "account": {
+      "profile": "Profile",
+      "logout": "Logout"
+    },
+    "subscription": {
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "addons": {
+      "avatar_time": "Avatar Time"
+    },
+    "messages": {
+      "loading": "Loading...",
+      "error_generic": "An error occurred",
+      "upgrade_prompt": "⚡ Upgrade for more features!",
+      "choose_continue": "Choose how you'd like to continue: (Malay translation needed)",
+      "perfect_qa_mode": "Perfect! Now choose your consultation mode: (Malay translation needed)",
+      "start_fresh_conversation": "🆕 Start Fresh Conversation",
+      "activating_report_mode": "Activating Report Generation Mode...",
+      "starting_consultation": "Starting your fresh consultation session...",
+      "loading_conversation_report": "Loading your previous conversation: \"{title}\"... I'll then generate a comprehensive report for you.",
+      "loading_conversation": "Loading your previous conversation: \"{title}\"...",
+      "generating_report": "Generating your immigration report...",
+      "perfect_continue": "Perfect! Let me continue helping you with your immigration case...",
+      "no_problem_discuss": "No problem! What would you like to discuss today?"
+    }
+  }
+}

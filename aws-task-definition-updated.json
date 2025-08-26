@@ -1,0 +1,36 @@
+{
+  "family": "worldimmigration-backend",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::697482068836:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::697482068836:role/ecsTaskRole",
+  "containerDefinitions": [
+    {
+      "name": "worldimmigration-backend",
+      "image": "697482068836.dkr.ecr.us-east-1.amazonaws.com/worldimmigration-backend:latest",
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/worldimmigration-backend",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "environment": [
+        {
+          "name": "ENV",
+          "value": "production"
+        }
+      ]
+    }
+  ]
+} 

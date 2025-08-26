@@ -1,0 +1,5 @@
+# Redirect www to non-www
+https://www.worldimmigrationconsultant.com/* https://worldimmigrationconsultant.com/:splat 301!
+
+# SPA fallback
+/*    /index.html   200

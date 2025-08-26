@@ -1,0 +1,564 @@
+.ai-avatar-container {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  flex-shrink: 0;
+  z-index: 50;
+}
+
+.ai-avatar-container.visible {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+  pointer-events: auto;
+}
+
+/* Subtle floating animation - much less aggressive */
+.ai-avatar-container.visible {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% { 
+    transform: translateY(-50%);
+  }
+  50% { 
+    transform: translateY(calc(-50% - 5px));
+  }
+}
+
+/* Remove glow when thinking to reduce visual noise */
+.ai-avatar-container.thinking .avatar-glow {
+  opacity: 0.1;
+}
+
+/* Glow effect - reduced intensity */
+.avatar-glow {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+  animation: subtlePulse 4s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes subtlePulse {
+  0%, 100% { 
+    opacity: 0.2; 
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.4; 
+    transform: scale(1.05);
+  }
+}
+
+/* Avatar frame */
+.ai-avatar-frame {
+  position: relative;
+  width: 200px;
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.avatar-placeholder {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.placeholder-avatar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 0;
+}
+
+.avatar-image.professional {
+  object-position: center top;
+  filter: brightness(1.05) contrast(1.1);
+}
+
+.avatar-image.loading {
+  opacity: 0;
+}
+
+.avatar-image.loaded {
+  opacity: 1;
+}
+
+/* CSS-based avatar fallback */
+.css-avatar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #fdbcb4 0%, #f4a19a 100%);
+  z-index: 1;
+}
+
+.avatar-head {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-top: 40px;
+}
+
+.avatar-hair {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  right: 10px;
+  height: 60px;
+  background: linear-gradient(145deg, #4a4a4a 0%, #2c2c2c 100%);
+  border-radius: 50px 50px 30px 30px;
+  z-index: 1;
+}
+
+.avatar-face {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  right: 20px;
+  bottom: 10px;
+  background: linear-gradient(180deg, #fdbcb4 0%, #f4a19a 100%);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.avatar-eyes {
+  position: absolute;
+  top: 25px;
+  left: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eye {
+  width: 12px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid #333;
+}
+
+.eye::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  background: #2c3e50;
+  border-radius: 50%;
+  animation: blink 4s infinite;
+}
+
+@keyframes blink {
+  0%, 90%, 100% { opacity: 1; }
+  95% { opacity: 0; }
+}
+
+.avatar-nose {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 4px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 50%;
+}
+
+.avatar-mouth {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 6px;
+  border: 2px solid #c86b73;
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+}
+
+.avatar-shoulders {
+  width: 140px;
+  height: 60px;
+  background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+  border-radius: 20px 20px 0 0;
+  margin-top: 10px;
+  position: relative;
+}
+
+.avatar-shoulders::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid #34495e;
+  border-right: 15px solid #34495e;
+  border-bottom: 20px solid white;
+}
+
+/* Expression overlays */
+.expression-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.expression-overlay.thinking::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.expression-overlay.thinking::after {
+  content: '🤔';
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  font-size: 1.5rem;
+  animation: think 2s ease-in-out infinite;
+}
+
+.expression-overlay.speaking::before {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.expression-overlay.speaking::after {
+  content: '💬';
+  position: absolute;
+  bottom: 22px;
+  left: 35px;
+  font-size: 1rem;
+  animation: speak 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes think {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(5deg); }
+}
+
+@keyframes speak {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.2); }
+}
+
+/* Status indicators */
+.avatar-status {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  white-space: nowrap;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.status-badge.thinking {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: white;
+}
+
+.status-badge.speaking {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.status-badge.online {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+}
+
+/* Thinking dots animation */
+.thinking-dots {
+  display: flex;
+  gap: 3px;
+}
+
+.thinking-dots span {
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 50%;
+  animation: thinking-pulse 1.4s ease-in-out infinite;
+}
+
+.thinking-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.thinking-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes thinking-pulse {
+  0%, 60%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  30% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+/* Sound waves animation */
+.sound-waves {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.sound-waves span {
+  width: 3px;
+  background: currentColor;
+  border-radius: 2px;
+  animation: sound-wave 1s ease-in-out infinite;
+}
+
+.sound-waves span:nth-child(1) {
+  height: 6px;
+  animation-delay: 0s;
+}
+
+.sound-waves span:nth-child(2) {
+  height: 12px;
+  animation-delay: 0.1s;
+}
+
+.sound-waves span:nth-child(3) {
+  height: 8px;
+  animation-delay: 0.2s;
+}
+
+.sound-waves span:nth-child(4) {
+  height: 10px;
+  animation-delay: 0.3s;
+}
+
+@keyframes sound-wave {
+  0%, 100% {
+    transform: scaleY(0.3);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+/* Pulse dot */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: currentColor;
+  border-radius: 50%;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+/* Avatar info */
+.avatar-info {
+  padding: 10px 15px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  margin-top: -5px;
+}
+
+.avatar-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 2px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.avatar-title {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0;
+  font-weight: 500;
+}
+
+.credentials-brief {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.credential {
+  font-size: 0.7rem;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+/* Hover effects */
+.ai-avatar-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.2),
+    0 15px 30px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.ai-avatar-frame:hover .avatar-image {
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .ai-avatar-container {
+    right: 20px;
+    width: 180px;
+  }
+  
+  .ai-avatar-frame {
+    width: 160px;
+  }
+  
+  .avatar-placeholder {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-avatar-container {
+    display: none; /* Hide avatar on mobile to save space */
+  }
+  
+  .ai-avatar-container.visible {
+    animation: none;
+  }
+  
+  .ai-avatar-frame {
+    width: 120px;
+  }
+  
+  .avatar-placeholder {
+    height: 150px;
+  }
+  
+  .credentials-brief {
+    display: none;
+  }
+  
+  .credential {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-avatar-frame {
+    width: 120px;
+  }
+  
+  .avatar-placeholder {
+    height: 140px;
+  }
+  
+  .avatar-info {
+    padding: 10px;
+  }
+  
+  .avatar-name {
+    font-size: 0.9rem;
+  }
+  
+  .avatar-title {
+    font-size: 0.75rem;
+  }
+} 

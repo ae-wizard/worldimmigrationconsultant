@@ -1,0 +1,723 @@
+import React, { useState, useEffect, useRef } from 'react';
+import StreamingAvatar, { AvatarQuality, StreamingEvents, TaskType } from '@heygen/streaming-avatar';
+import './AvatarSarah.css';
+
+const AvatarSarah = ({ onAvatarReady, textToSpeak, onStartConversation }) => {
+  // State management
+  const [avatarStatus, setAvatarStatus] = useState('waiting'); // Start with 'waiting' for manual start
+  const [streamingAvatar, setStreamingAvatar] = useState(null);
+  const [isConnected, setIsConnected] = useState(false);
+  const [isReady, setIsReady] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [useEmbedFallback, setUseEmbedFallback] = useState(false);
+  const [showUserInteraction, setShowUserInteraction] = useState(false);
+  const [manualStartReady, setManualStartReady] = useState(false);
+  const [sessionStartTime, setSessionStartTime] = useState(null);
+  const [showIdleWarning, setShowIdleWarning] = useState(false);
+  const [timeRemaining, setTimeRemaining] = useState(120);
+  const [userLanguage, setUserLanguage] = useState('en');
+  const [currentSessionId, setCurrentSessionId] = useState(null);
+  const [currentSessionToken, setCurrentSessionToken] = useState(null);
+  const [voiceQuality, setVoiceQuality] = useState('premium'); // Track voice quality
+
+  // Refs
+  const mediaElementRef = useRef(null);
+  const initializationTimeoutRef = useRef(null);
+  const readyTimeoutRef = useRef(null);
+  const fallbackTimeoutRef = useRef(null);
+  const idleTimeoutRef = useRef(null);
+  const warningTimeoutRef = useRef(null);
+  const countdownRef = useRef(null);
+  const lastActivityRef = useRef(null);
+
+  // Debug function (only logs in development)
+  const log = (message) => {
+    if (process.env.NODE_ENV === 'development') {
+      const timestamp = new Date().toLocaleTimeString();
+      console.log(`🤖 [AvatarSarah] ${timestamp}: ${message}`);
+    }
+  };
+
+  // Get user's current language and listen for changes
+  useEffect(() => {
+    const fetchUserLanguage = async () => {
+      try {
+        const response = await fetch('http://localhost:8001/auth/get-language', {
+          headers: getAuthHeaders()
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          const newLanguage = data.language || 'en';
+          setUserLanguage(newLanguage);
+          log(`🌐 [Language] User language set to: ${newLanguage}`);
+        }
+      } catch (error) {
+        log(`❌ [Language] Error fetching language: ${error.message}`);
+      }
+    };
+
+    fetchUserLanguage();
+
+    // Listen for language change events
+    const handleLanguageChange = (event) => {
+      if (event.detail && event.detail.language) {
+        const newLanguage = event.detail.language;
+        setUserLanguage(newLanguage);
+        log(`🌐 [Language] Language changed to: ${newLanguage}`);
+      }
+    };
+
+    window.addEventListener('languageChanged', handleLanguageChange);
+    
+    return () => {
+      window.removeEventListener('languageChanged', handleLanguageChange);
+    };
+  }, []);
+
+  // Check ElevenLabs availability on mount
+  useEffect(() => {
+    const checkVoiceQuality = async () => {
+      try {
+        const response = await fetch('http://localhost:8001/heygen/voices');
+        if (response.ok) {
+          const data = await response.json();
+          setVoiceQuality(data.voice_quality || 'standard');
+          log(`🎙️ [Voice] Quality available: ${data.voice_quality}, ElevenLabs: ${data.elevenlabs_available}`);
+        }
+      } catch (error) {
+        log(`❌ [Voice] Error checking voice quality: ${error.message}`);
+      }
+    };
+
+    checkVoiceQuality();
+  }, []);
+
+  // Start idle timeout monitoring
+  const startIdleTimeout = () => {
+    log('⏰ Starting 120-second idle timeout');
+    lastActivityRef.current = Date.now();
+    
+    // Clear any existing timeouts
+    if (idleTimeoutRef.current) {
+      clearTimeout(idleTimeoutRef.current);
+    }
+    if (warningTimeoutRef.current) {
+      clearTimeout(warningTimeoutRef.current);
+    }
+    if (countdownRef.current) {
+      clearInterval(countdownRef.current);
+    }
+    
+    // Show warning at 90 seconds (30 seconds before timeout)
+    warningTimeoutRef.current = setTimeout(() => {
+      setShowIdleWarning(true);
+      setTimeRemaining(30);
+      log('⚠️ Showing idle warning - 30 seconds remaining');
+      
+      // Start countdown
+      countdownRef.current = setInterval(() => {
+        setTimeRemaining((prev) => {
+          if (prev <= 1) {
+            clearInterval(countdownRef.current);
+            return 0;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    }, 90000); // 90 seconds
+    
+    // End session at 120 seconds
+    idleTimeoutRef.current = setTimeout(() => {
+      log('⏰ Idle timeout reached - ending session');
+      handleIdleTimeout();
+    }, 120000); // 120 seconds
+  };
+
+  // Reset idle timeout on activity
+  const resetIdleTimeout = () => {
+    if (isConnected && isReady) {
+      log('🔄 Resetting idle timeout due to activity');
+      lastActivityRef.current = Date.now();
+      setShowIdleWarning(false);
+      startIdleTimeout();
+    }
+  };
+
+  // Handle idle timeout
+  const handleIdleTimeout = async () => {
+    log('⏰ Handling idle timeout - ending session');
+    
+    try {
+      // Track the session before ending
+      await trackAvatarSession();
+      
+      // End the session
+      setAvatarStatus('idle_timeout');
+      setIsConnected(false);
+      setIsReady(false);
+      setShowIdleWarning(false);
+      
+      if (onAvatarReady) {
+        onAvatarReady(false, 'idle_timeout');
+      }
+      
+      // Disconnect the avatar
+      if (streamingAvatar) {
+        streamingAvatar.disconnect();
+      }
+      
+    } catch (error) {
+      log(`❌ Error during idle timeout: ${error.message}`);
+    }
+  };
+
+  // Track avatar session usage
+  const trackAvatarSession = async () => {
+    if (!sessionStartTime) return;
+    
+    const sessionDuration = Math.round((Date.now() - sessionStartTime) / 1000 / 60); // Duration in minutes
+    
+    try {
+      log(`📊 Tracking avatar session: ${sessionDuration} minutes`);
+      
+      const response = await fetch('http://localhost:8001/auth/track-avatar-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...getAuthHeaders()
+        },
+        body: JSON.stringify({
+          session_duration_minutes: sessionDuration
+        })
+      });
+      
+      if (response.ok) {
+        const data = await response.json();
+        log(`✅ Avatar session tracked successfully: ${data.message}`);
+      } else {
+        log(`❌ Failed to track avatar session: ${response.status}`);
+      }
+      
+    } catch (error) {
+      log(`❌ Error tracking avatar session: ${error.message}`);
+    }
+  };
+
+  // Extend session (reset timeout)
+  const extendSession = () => {
+    log('🔄 User extended session');
+    setShowIdleWarning(false);
+    resetIdleTimeout();
+  };
+
+  // Initialize avatar on component mount
+  useEffect(() => {
+    log('🔧 AvatarSarah component mounted - waiting for manual start');
+    setManualStartReady(true);
+
+    return () => {
+      log('🧹 Component unmounting');
+      cleanup();
+    };
+  }, []);
+
+  // Handle manual conversation start
+  const handleManualStart = async () => {
+    log('🎬 Manual start initiated - starting avatar and conversation...');
+    setAvatarStatus('initializing');
+    setManualStartReady(false);
+    
+    // Start conversation coordination
+    if (onStartConversation) {
+      onStartConversation();
+    }
+    
+    await initializeAvatar();
+  };
+
+  // Initialize the StreamingAvatar - ENHANCED to capture session details
+  const initializeAvatar = async () => {
+    try {
+      log('🚀 Initializing HeyGen StreamingAvatar...');
+      
+      const sessionData = await createAccessToken();
+      const avatar = new StreamingAvatar({
+        token: sessionData.token,
+      });
+
+      setStreamingAvatar(avatar);
+      setAvatarStatus('connecting');
+
+      // Set up event listeners
+      avatar.on(StreamingEvents.STREAM_READY, handleStreamReady);
+      avatar.on(StreamingEvents.STREAM_DISCONNECTED, handleStreamDisconnected);
+      avatar.on(StreamingEvents.AVATAR_START_TALKING, handleAvatarStartTalking);
+      avatar.on(StreamingEvents.AVATAR_STOP_TALKING, handleAvatarStopTalking);
+
+      // Create and start avatar session with minimal configuration for verbatim speech
+      const sessionInfo = await avatar.createStartAvatar({
+        quality: AvatarQuality.Low, // Use low quality for better performance
+        avatarName: 'June_HR_public', // Using the public avatar
+        voice: {
+          voiceId: '1bd001e7e50f421d891986aad5158bc8',
+          rate: 1.0
+        },
+        language: userLanguage, // Use current user language
+        // Don't set any knowledge base at all - keep it minimal
+        disableIdleTimeout: true
+      });
+
+      // Store session details for enhanced voice calls
+      if (sessionInfo && sessionInfo.session_id) {
+        setCurrentSessionId(sessionInfo.session_id);
+        setCurrentSessionToken(sessionData.token);
+        log(`✅ Avatar session created: ${sessionInfo.session_id} (language: ${userLanguage})`);
+      }
+
+      log('✅ Avatar session created and started (configured for enhanced voice)');
+
+    } catch (error) {
+      log(`❌ Avatar initialization failed: ${error.message}`);
+      setAvatarStatus('error');
+      
+      // Set fallback timeout
+      fallbackTimeoutRef.current = setTimeout(() => {
+        handleFallbackMode();
+      }, 5000);
+    }
+  };
+
+  // Create access token for HeyGen - ENHANCED to return full response
+  const createAccessToken = async () => {
+    try {
+      log('🎟️ Creating HeyGen access token...');
+      const response = await fetch('http://localhost:8001/heygen/create-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...getAuthHeaders()
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      log('✅ Access token created successfully');
+      return {
+        token: data.session_token,
+        usage_info: data.usage_info || {}
+      };
+    } catch (error) {
+      log(`❌ Failed to create access token: ${error.message}`);
+      throw error;
+    }
+  };
+
+  // Get authentication headers
+  const getAuthHeaders = () => {
+    const token = localStorage.getItem('authToken');
+    return token ? { 'Authorization': `Bearer ${token}` } : {};
+  };
+
+  // Handle stream ready event
+  const handleStreamReady = (event) => {
+    log('✅ Avatar stream ready');
+    
+    if (event.detail && mediaElementRef.current) {
+      log('📺 Video stream attached');
+      mediaElementRef.current.srcObject = event.detail;
+      
+      // Try to play video with autoplay handling
+      const playPromise = mediaElementRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            log('📺 Video started playing');
+            setIsConnected(true);
+            setIsReady(true);
+            setAvatarStatus('ready');
+            setSessionStartTime(Date.now());
+            
+            // Start idle timeout monitoring
+            startIdleTimeout();
+            
+            // Notify parent component
+            if (onAvatarReady) {
+              onAvatarReady(true, 'ready');
+            }
+            
+            log('🎉 Avatar is now ready - notifying parent component');
+          })
+          .catch((error) => {
+            log(`⚠️ Video autoplay blocked: ${error.message}`);
+            setShowUserInteraction(true);
+          });
+      }
+    }
+  };
+
+  // Handle user interaction to enable video/audio
+  const handleUserInteraction = async () => {
+    try {
+      if (mediaElementRef.current) {
+        await mediaElementRef.current.play();
+        setShowUserInteraction(false);
+        setIsConnected(true);
+        setIsReady(true);
+        setAvatarStatus('ready');
+        setSessionStartTime(Date.now());
+        
+        // Start idle timeout monitoring
+        startIdleTimeout();
+        
+        if (onAvatarReady) {
+          onAvatarReady(true, 'ready');
+        }
+        
+        log('✅ User interaction completed - avatar ready');
+      }
+    } catch (error) {
+      log(`❌ Failed to start video after interaction: ${error.message}`);
+    }
+  };
+
+  // Handle stream disconnected event
+  const handleStreamDisconnected = async () => {
+    log('🔌 Avatar stream disconnected');
+    
+    // Track the session before disconnecting
+    await trackAvatarSession();
+    
+    setIsConnected(false);
+    setIsReady(false);
+    setAvatarStatus('disconnected');
+    
+    if (onAvatarReady) {
+      onAvatarReady(false, 'disconnected');
+    }
+  };
+
+  // Handle avatar talking events
+  const handleAvatarStartTalking = () => {
+    log('🗣️ Avatar started talking');
+    setIsSpeaking(true);
+  };
+
+  const handleAvatarStopTalking = () => {
+    log('🤐 Avatar stopped talking');
+    setIsSpeaking(false);
+  };
+
+  // Send speaking task to avatar - ENHANCED with ElevenLabs integration
+  const speakText = async (text) => {
+    if (!streamingAvatar || !isConnected || !isReady) {
+      log(`❌ Avatar not ready for speaking (connected: ${isConnected}, ready: ${isReady})`);
+      return;
+    }
+
+    if (!currentSessionId || !currentSessionToken) {
+      log(`❌ Session not available for enhanced voice (sessionId: ${!!currentSessionId}, token: ${!!currentSessionToken})`);
+      return;
+    }
+
+    // Clean the text for avatar speech - preserve Chinese characters and names
+    const cleanedText = text
+      .replace(/[*_~`#]/g, '') // Remove markdown
+      .replace(/[\u{1F600}-\u{1F64F}]|[\u{1F300}-\u{1F5FF}]|[\u{1F680}-\u{1F6FF}]|[\u{1F1E0}-\u{1F1FF}]/gu, '') // Remove emojis (SAFE: doesn't affect Chinese chars)
+      .replace(/🇦🇺|🇩🇿|🇺🇸|🇬🇧|🇨🇦|🇩🇪|🇫🇷|🇮🇹|🇪🇸|🇳🇱/g, '') // Remove specific flag emojis
+      .replace(/\*\*/g, '') // Remove bold markdown
+      .replace(/\n/g, ' ') // Replace newlines with spaces
+      .replace(/\s+/g, ' ') // Normalize multiple spaces
+      .trim();
+    
+    // Keep names like "Sarah" and "Premium" in English - don't translate them
+    // Chinese characters (U+4E00-U+9FFF) are preserved by this cleaning
+
+    try {
+      log(`💬 Sending text to avatar: "${cleanedText.substring(0, 50)}..."`);
+      log(`🧹 Original length: ${text.length}, cleaned length: ${cleanedText.length}`);
+      log(`🌐 Using language: ${userLanguage}, Voice quality: ${voiceQuality}`);
+      
+      setIsSpeaking(true);
+
+      // Use our enhanced backend endpoint with ElevenLabs integration
+      const response = await fetch('http://localhost:8001/heygen/send-task', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...getAuthHeaders()
+        },
+        body: JSON.stringify({
+          session_id: currentSessionId,
+          session_token: currentSessionToken,
+          text: cleanedText,
+          task_type: 'talk',
+          use_elevenlabs: voiceQuality === 'premium', // Use ElevenLabs if available
+          language: userLanguage // Pass current language for voice selection
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const result = await response.json();
+      log(`✅ Enhanced voice task sent successfully (provider: ${result.voice_provider})`);
+
+      // Reset idle timeout on activity
+      resetIdleTimeout();
+
+    } catch (error) {
+      log(`❌ Failed to send enhanced voice task: ${error.message}`);
+      
+      // Fallback to direct SDK call if backend fails
+      try {
+        log(`🔄 Falling back to direct SDK call`);
+        await streamingAvatar.speak({
+          text: cleanedText,
+          task_type: TaskType.REPEAT,
+        });
+        log(`✅ Fallback SDK call successful`);
+      } catch (sdkError) {
+        log(`❌ Fallback SDK call also failed: ${sdkError.message}`);
+      }
+      
+      setIsSpeaking(false);
+    }
+  };
+
+  // Handle text to speak prop changes
+  useEffect(() => {
+    if (textToSpeak && textToSpeak.length > 0) {
+      speakText(textToSpeak);
+    }
+  }, [textToSpeak]);
+
+  // Handle fallback mode
+  const handleFallbackMode = () => {
+    log('⚠️ Switching to embed fallback mode');
+    setUseEmbedFallback(true);
+    setAvatarStatus('embed');
+    
+    if (onAvatarReady) {
+      onAvatarReady(false, 'fallback');
+    }
+  };
+
+  // Cleanup function
+  const cleanup = async () => {
+    // Clear all timers
+    if (initializationTimeoutRef.current) {
+      clearTimeout(initializationTimeoutRef.current);
+    }
+    if (readyTimeoutRef.current) {
+      clearTimeout(readyTimeoutRef.current);
+    }
+    if (fallbackTimeoutRef.current) {
+      clearTimeout(fallbackTimeoutRef.current);
+    }
+    if (idleTimeoutRef.current) {
+      clearTimeout(idleTimeoutRef.current);
+    }
+    if (warningTimeoutRef.current) {
+      clearTimeout(warningTimeoutRef.current);
+    }
+    if (countdownRef.current) {
+      clearInterval(countdownRef.current);
+    }
+    
+    // Track session if there was one
+    if (sessionStartTime) {
+      await trackAvatarSession();
+    }
+    
+    if (streamingAvatar) {
+      streamingAvatar.disconnect();
+    }
+  };
+
+  // Render manual start overlay
+  if (manualStartReady && avatarStatus === 'waiting') {
+    return (
+      <div className="avatar-sarah">
+        <div className="avatar-header">
+          <h3>Meet Sarah, Your Immigration Consultant</h3>
+        </div>
+        <div className="manual-start-overlay">
+          <div className="start-content">
+            <div className="start-icon">👩‍💼</div>
+            <h3>Ready to Start Your Consultation</h3>
+            <p>Click below to begin speaking with Sarah, your AI-powered immigration consultant.</p>
+            <button 
+              className="start-button"
+              onClick={handleManualStart}
+            >
+              <span>🎬</span>
+              Start Immigration Consultation
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Main avatar render
+  return (
+    <div className="avatar-sarah">
+      <div className="avatar-header">
+        <h3>Sarah - Immigration Consultant</h3>
+      </div>
+      
+      <div className="avatar-container">
+        {/* Video element for live avatar */}
+        <video
+          ref={mediaElementRef}
+          autoPlay
+          playsInline
+          muted={false}
+          className="avatar-video"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            display: useEmbedFallback ? 'none' : 'block'
+          }}
+        />
+
+        {/* User interaction overlay */}
+        {showUserInteraction && (
+          <div className="user-interaction-overlay">
+            <div className="interaction-content">
+              <div className="interaction-icon">🎥</div>
+              <h3>Enable Video & Audio</h3>
+              <p>Click to start video and enable Sarah's voice</p>
+              <button 
+                className="interaction-button"
+                onClick={handleUserInteraction}
+              >
+                <span>🔊</span>
+                Start Video & Audio
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Loading overlay */}
+        {(avatarStatus === 'initializing' || avatarStatus === 'connecting') && (
+          <div className="loading-overlay">
+            <div className="loading-spinner"></div>
+            <div className="loading-text">
+              {avatarStatus === 'initializing' ? 'Initializing Sarah...' : 'Connecting to Sarah...'}
+            </div>
+          </div>
+        )}
+
+        {/* Speaking indicator with language and voice quality */}
+        {isSpeaking && isReady && (
+          <div className="speaking-indicator">
+            <div className="speaking-pulse"></div>
+            <span>Sarah is speaking...</span>
+            <div className="voice-info">
+              <span className="language-indicator">🌐 {userLanguage.toUpperCase()}</span>
+              {voiceQuality === 'premium' && <span className="voice-quality">🎙️ Premium Voice</span>}
+            </div>
+          </div>
+        )}
+
+        {/* Voice quality indicator */}
+        {isReady && !isSpeaking && (
+          <div className="voice-status">
+            <span className="language-current">🌐 {userLanguage.toUpperCase()}</span>
+            <span className="voice-quality-status">
+              {voiceQuality === 'premium' ? '🎙️ ElevenLabs Voice' : '🔊 Standard Voice'}
+            </span>
+          </div>
+        )}
+
+        {/* Idle warning overlay */}
+        {showIdleWarning && (
+          <div className="idle-warning-overlay">
+            <div className="idle-warning-content">
+              <div className="warning-icon">⏰</div>
+              <h3>Session Ending Soon</h3>
+              <p>Your session will end in <strong>{timeRemaining}</strong> seconds due to inactivity.</p>
+              <div className="warning-actions">
+                <button 
+                  className="extend-session-btn"
+                  onClick={extendSession}
+                >
+                  Continue Session
+                </button>
+                <button 
+                  className="end-session-btn"
+                  onClick={handleIdleTimeout}
+                >
+                  End Session
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Embed fallback */}
+        {useEmbedFallback && (
+          <div className="embed-fallback">
+            <iframe
+              src="https://app.heygen.com/embeds/avatar_selector"
+              width="100%"
+              height="100%"
+              frameBorder="0"
+              allow="camera; microphone"
+              title="Sarah - Immigration Consultant"
+            />
+          </div>
+        )}
+
+        {/* Error overlay */}
+        {avatarStatus === 'error' && (
+          <div className="error-overlay">
+            <div className="error-content">
+              <div className="error-icon">⚠️</div>
+              <h3>Avatar Connection Issue</h3>
+              <p>Unable to connect to Sarah's avatar. You can still enjoy all premium features via chat mode!</p>
+              <div className="premium-features">
+                <div className="feature">✅ Unlimited AI conversations</div>
+                <div className="feature">✅ Detailed PDF reports</div>
+                <div className="feature">✅ Priority support</div>
+              </div>
+              <button 
+                className="restart-btn"
+                onClick={handleManualStart}
+                style={{marginTop: '15px', padding: '8px 16px', background: '#667eea', color: 'white', border: 'none', borderRadius: '6px', cursor: 'pointer'}}
+              >
+                Try Again
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Idle timeout overlay */}
+        {avatarStatus === 'idle_timeout' && (
+          <div className="error-overlay">
+            <div className="error-content">
+              <div className="error-icon">⏰</div>
+              <h3>Session Ended</h3>
+              <p>Your avatar session has ended due to inactivity. You can continue chatting in text mode.</p>
+              <button 
+                className="restart-btn"
+                onClick={handleManualStart}
+              >
+                Start New Session
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default AvatarSarah; 
